@@ -21,7 +21,7 @@ function Game() {
     if(guessList.length === NUM_OF_GUESSES_ALLOWED) {
       return;
     }
-    
+
     // TODO: remove debug statement
     console.info({ guess });
 
@@ -31,7 +31,7 @@ function Game() {
   }
 
   return <>
-    <GuessResults guessList={guessList} />
+    <GuessResults guessList={guessList} answer={answer} />
 
     <GuessInput guess={guess} setGuess={setGuess} submitGuess={submitGuess} />
   </>;
