@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({ guess, setGuess, submitGuess }) {
+function GuessInput({ guess, setGuess, submitGuess, disabled }) {
 
   return <div>
     <form className="guess-input-wrapper" onSubmit={(e) => {
@@ -17,6 +17,8 @@ function GuessInput({ guess, setGuess, submitGuess }) {
         pattern="\w{5,5}"
         autoComplete="off"
         required
+        autoFocus
+        disabled={disabled}
       />
     </form>
   </div>;
